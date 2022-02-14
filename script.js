@@ -4,6 +4,7 @@ window.addEventListener("load",()=>{
     var fade = document.querySelector(".main");
             pageloader.style.display="none";
             main.style.display="block";
+            AOS.init();
             var opacity = 0;
             var intervalID = setInterval(function() {
   
@@ -14,9 +15,6 @@ window.addEventListener("load",()=>{
                  else {     
                     clearInterval(intervalID);
                 }
-                if(opacity>1)
-                  AOS.refresh();
-
             }, 100);
 });
 
