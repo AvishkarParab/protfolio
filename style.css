@@ -1,0 +1,395 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.pageloader{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+}
+.pageloader .xx img{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    opacity: 0.2;
+    /* border: 1px solid white; */
+    
+}
+.pageloader img{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 42%;
+    left: 43%;
+    /* border: 1px solid white; */
+    
+}
+.main{
+    display: none;
+    opacity: 0;
+}
+.navbar{
+    background:linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.6),rgba(0,0,0,0.3));
+    color: cyan;
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+}
+.navbar-brand{
+    text-decoration: none;
+    color: white;
+}
+.menu li{
+    border-radius: 16px;
+    color: rgba(21, 233, 233, 0.884);
+}
+.menu li.active{
+    background-color: rgba(12, 154, 248, 0.527);
+    transition: 0.5s ease;
+    color: black;
+}
+.menu li a{
+    text-decoration: none;
+    -webkit-appearance: none;
+    color: white;
+}
+.menu li a:hover{
+    color: cyan;
+}
+.home1{
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.6)) ,url("./images/avi1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.home1 .socials, .foot_socials{
+    width:max-content;
+    font-size: 25px;
+    padding:5px;
+}
+.socials a, .foot_socials a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: white;
+}
+.home1 .socials a:hover,.foot_socials a:hover{
+    color: cyan;
+    transition: 0.3s ease-in-out;
+}
+.home1 .logo{   
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    height: 100px;
+    width: 100px;
+}
+.home1 .logo img{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    font-family: 'Roboto', sans-serif;
+}
+.content h4 span{
+    color: cyan;
+}
+.content h4 span:hover{
+    color: rgb(10, 243, 80);
+}
+.content h1{
+    font-size: 70px;
+}
+.content h1:hover{
+    color: rgb(10, 243, 80) !important;
+    transition: .3s ease-in-out;
+}
+.home1 .mouse{
+    position: absolute;
+    bottom: 10px;
+    right: 47%;
+}
+
+.profile1,.res,.proj{
+    background: linear-gradient(to right,rgba(0,0,0,1),rgba(3, 4, 53, 0.959),rgba(0,0,0,1));
+    font-family: Montserrat,sans-serif
+}
+.prof .ab{
+    width: 450px;
+    background-color: rgba(19, 236, 236, 0.171);
+    border-radius: 16px;
+    font-size: 17px;
+    border: 3px solid rgb(11, 233, 233);
+    
+}
+.prof .ul li{
+    list-style: none;
+    margin-bottom: 6px;
+}
+.prof .image{
+    display: flex;
+    justify-content: center;
+}
+.image .imgcont{
+    height: 450px;
+    width: 350px;
+    border-radius: 10px;
+    border: 1px solid cyan;
+   box-shadow: 0px 0px 15px 2px cyan;;
+}
+.imgcont img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.skills{
+    position: relative;
+    padding: 5px;
+    margin-bottom:5px ;
+}
+.skills .sdetails{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.skills .percent{
+    position: relative;
+    height: 12px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid cyan;
+}
+.skills .percent .bar{
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    transition: width, 2s ease;
+    background-color: cyan;
+    border:2px solid cyan;
+    /* animation: progress 2s;  */
+}
+/* @keyframes progress {
+    from{width: 0;}
+} */
+@media (prefers-reduced-motion: no-preference) {
+    .bar-animation {
+      animation: progress 2.5s 1;
+    }
+    @keyframes progress {
+        from{width: 0;}
+    }
+  }
+.box{
+    display: grid;
+    place-items: center;
+}
+.box h6{
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+.box .chart{
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 10px 10px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 150px;
+}
+.box canvas{
+    position: absolute;
+    top: 20px;
+    left: 2px;
+}
+.res{
+    height: 60vh;
+    font-family: Montserrat,sans-serif
+}
+
+.procont{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.procont .proimage{
+    position: relative;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    border: 1px solid cyan;
+}
+.procont img{
+    /* position: absolute; */
+    width: 80%;
+    height: 100%;
+}
+.procont span{
+    font-family: sans-serif;
+    color: rgb(255, 13, 13);
+    font-size: 20px;
+   position: absolute;
+   top: 50%;
+   left: 40%;
+   font-weight: 600;
+   transition: .2s ease-in-out;
+  display: none;
+    
+}
+.procont a button{
+    position: absolute;
+    bottom: 10px;
+    left: 42%;
+    border:1px solid red;
+    color: red;
+    display: none;
+}
+.procont a button:hover{
+    background-color: red;
+    color: white;
+    transition: .2s ease-in-out;
+}
+.procont .proimage:hover{
+    background:linear-gradient(to right,rgba(255, 255, 255, 0.842),rgba(255, 255, 255, 0.973));
+    transition: ease-in-out;
+    transition-delay: 1s;
+}
+.procont img:hover{
+    opacity: 0;
+}
+
+
+.proj{
+    height: 100vh;
+    background-attachment: fixed;
+    clip-path: polygon(50% 100%, 100% 85%, 100% 0, 0 0, 0 83%);
+    font-family: Montserrat,sans-serif
+
+}
+.con{
+    height: 100vh;
+    font-family: Montserrat,sans-serif
+}
+.contact_detail{
+    
+}
+.contact_detail .holder{
+    background: linear-gradient(to right,rgb(6, 2, 54),rgb(4, 1, 43));
+    backdrop-filter: blur(30px);
+    border-radius: 25px;
+    width: 600px;
+    padding: 20px;
+    border: 1.5px solid cyan;
+    box-shadow: 3px 5px 3px 6px rgba(0, 0, 0, 0.575);
+}
+
+.contact_detail input,.contact_detail textarea{
+    width: 100%;
+    background: transparent;
+    /* border: 1px solid rgb(251, 254, 255); */
+    border: none;
+    border-bottom: 1px solid rgb(251, 254, 255);;
+    padding-left: 10px;
+    padding-top: 2px;
+    color: cyan;
+    border-radius: 2px;
+}
+.contact_detail input::placeholder,.contact_detail textarea::placeholder{
+    color: cyan;
+    font-weight: bolder;
+    opacity: 0.5;
+}
+.contact_detail input{
+    height: 40px;
+}
+
+
+.footer{
+    position: relative;
+    background-color: black;
+    color: white;
+    height: 200px;
+
+}
+.sampark li{
+    list-style: none;
+}
+.foot_socials{
+    width: 100%;
+    padding: 5px;
+}
+.copy{
+    position: absolute;
+    width: 100%;
+    bottom: 3px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar{
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgba(9, 68, 231, 0.774),rgba(5, 226, 255, 0.966));
+    border-radius: 20px
+}
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+
+  @media  only screen and (max-width:768px) {
+    .pageloader img{
+        left: 40%;
+    }
+    .proj{
+        height: 170vh;
+    }
+    .holder{
+        width: 80vw;
+    }
+
+  }
+  @media  only screen and (max-width:450px) {
+    .pageloader img{
+        left: 36%;
+        height: 150px;
+        width: 150px;
+    }
+    .prof .ab{
+        width: 300px;
+    }
+    .proj{
+        height: 160vh;
+    }
+    .procont .proimage{
+        height: 200px;
+    }
+    .proimage img{
+        width: 200px;
+        height: 200px;
+    }
+    .holder{
+        width: 100px;
+    }
+
+  }
