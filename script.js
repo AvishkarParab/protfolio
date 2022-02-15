@@ -1,10 +1,12 @@
 const pageloader=document.querySelector('.pageloader');
 const main=document.querySelector('.main');
+
 window.addEventListener("load",()=>{
     var fade = document.querySelector(".main");
             pageloader.style.display="none";
             main.style.display="block";
             AOS.init();
+
             var opacity = 0;
             var intervalID = setInterval(function() {
   
@@ -17,28 +19,6 @@ window.addEventListener("load",()=>{
                 }
             }, 100);
 });
-
-// window.onload = fadeIn;
-  
-//         function fadeIn() {
-//             var fade = document.querySelector(".main");
-//             pageloader.style.display="none";
-//             main.style.display="block";
-//             var opacity = 0;
-//             var intervalID = setInterval(function() {
-  
-//                 if (opacity < 1) {
-//                     opacity = opacity + 0.1
-//                     fade.style.opacity = opacity;
-//                 }
-//                  else {     
-//                     clearInterval(intervalID);
-//                 }
-//                 if(opacity>1)
-//                   AOS.refresh();
-
-//             }, 100);
-//         }
 
 
 const list = document.querySelectorAll('.nav-item');
@@ -100,7 +80,6 @@ var typed = new Typed('.type', {
  const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {  
             if (entry.isIntersecting) {
-                console.log("reached");
                 $('.chart').easyPieChart({
                     barColor:"cyan",
                     trackColor:"black",
