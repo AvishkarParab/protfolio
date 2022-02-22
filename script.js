@@ -96,18 +96,22 @@ var typed = new Typed('.type', {
 const proj = document.querySelectorAll('.proimage');
 proj.forEach(ele =>{
     const span = ele.querySelector('span');
+    const h5 = ele.querySelector('h5');
     const but = ele.querySelector(' a button');
     ele.addEventListener("mouseover", ()=>{
         span.style.display = "block";
         but.style.display = "block";
+        h5.style.display = "block";
        
     });
 })
 proj.forEach(ele =>{
     const span = ele.querySelector('span');
+    const h5 = ele.querySelector('h5');
     const but = ele.querySelector('a button');
     ele.addEventListener("mouseout", ()=>{
         span.style.display = "none";
         but.style.display = "none";
+        h5.style.display = "none";
     });
 })
